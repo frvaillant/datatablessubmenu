@@ -4,6 +4,10 @@
     --color-light : #ddd;
 }
 
+.hide {
+    display:none;
+}
+
 .submenu-row {
     background: var(--color-light);
     position: absolute;
