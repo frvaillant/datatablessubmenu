@@ -1,0 +1,24 @@
+{
+  "name": "datatablessubmenu",
+  "version": "1.0.0",
+  "description": "Allow to add a submenu on click on datatables rows",
+  "main": "DatatablesSubmenu.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frvaillant/datatablessubmenu.git"
+  },
+  "keywords": [
+    "datatables",
+    "submenu",
+    "menu"
+  ],
+  "author": "François VAILLANT",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frvaillant/datatablessubmenu/issues"
+  },
+  "homepage": "https://github.com/frvaillant/datatablessubmenu#readme"
+}
