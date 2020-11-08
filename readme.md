@@ -4,7 +4,7 @@ this module helps you to add a submenu on a click on a table row.
 Very useful when using datatbles for example.
 
 ## install the module
-`npm install datatablessubmenu`
+`yarn install datatablessubmenu`
 
 ## Basics
 
@@ -71,7 +71,7 @@ This module comes with a basic css you can import with
 Because of the jQuery included in twig templates to make datatables working, you'll have to include your submenus in your template too.
 
 ### install
-`npm install datatablessubmenu`
+`yarn install datatablessubmenu`
 
 ### Create an asset that will be available in public directory
 
