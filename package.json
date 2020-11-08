@@ -20,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/frvaillant/datatablessubmenu/issues"
   },
-  "homepage": "https://github.com/frvaillant/datatablessubmenu#readme"
+  "homepage": "https://github.com/frvaillant/datatablessubmenu#readme",
+  "style": "css/style.css"
 }

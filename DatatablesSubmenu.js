@@ -4,7 +4,7 @@ class TableSubmenu {
         this.config = config
         this.id = row.getAttribute('id')
         if (!this.id) {
-            error.log('Table rows must have an id to create submenus')
+            console.error('Table rows must have an id to create submenus')
             return
         }
         this.submenuElement = null
@@ -13,8 +13,11 @@ class TableSubmenu {
     }
 
     check() {
-        if (!this.config.children || !this.config.parent) {
-            error.log('TableSubmenu : error : config is not properly defined')
+        if (
+            !this.config.children ||
+            !this.config.parent
+        ) {
+            console.error('TableSubmenu : error : config is not properly defined')
             return
         }
     }
@@ -39,7 +42,7 @@ class TableSubmenu {
     createlink(link) {
         let a = document.createElement('a')
         if (!link.routePrefix) {
-            error.log('TableSubmenu : error : Yout must specify route prefix in config for child element')
+            console.error('TableSubmenu : error : Yout must specify route prefix in config for child element')
             return
         }
         const routeSufix = (link.routeSufix) ? link.routeSufix : ''

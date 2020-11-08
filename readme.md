@@ -21,9 +21,6 @@ You must create a config object to let TableSubmenu class know how to build your
     
 ### create a js file
 ```javascript
- 
-import {TableSubmenu} from "DatatablesSubmenu"
-
 document.addEventListener('DOMContentLoaded', () => {
     // select all rows in your table
     const rows = document.querySelectorAll('tr')
@@ -66,32 +63,30 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 ```
 
+### Import Css
+This module comes with a basic css you can import with
+`@import "~datatablessubmenu";`
+
 ## Use it inside a symfony project with Datatables Omines Bundle
+Because of the jQuery included in twig templates to make datatables working, you'll have to include your submenus in your template too.
 
 ### install
 `npm install datatablessubmenu`
 
-### Create an asset
+### Create an asset that will be available in public directory
 
-First create a js file `submenu.js`
-Edit this file :
+First edit your webpack.config.js file and paste these lines :
 
-```javascript
-
-import {TableSubmenu} from "DatatablesSubmenu"
-function subMenu () {
-  return TableSubmenu
-}
-```
-edit your Webpack.config.js file and add theses lines
-
-```javascript
+````javascript
 .copyFiles({
-        from: './route/to/your/js/file/submenu.js',
-        to: 'js/[path][name].[ext]',
+        from: './node_modules/datatablessubmenu',
+        to: 'modules/datatablessubmenu/[path][name].[ext]',
+        pattern: /\.(js)$/
     })
+````
 
-```
+### Include TableSubmenu class in your template
+`<script src="{{ asset('build/modules/datatablessubmenu/DatatablesSubmenu.js') }}"></script>`
 
 ### Use it in your datatables configuration
 in your twig template you should have your initDatatable function.
@@ -134,3 +129,6 @@ $('#yourTableId').initDataTables({{ datatable_settings(datatable) }}, {
         })
 
 ```
+### Import Css
+This module comes with a basic css you can import with
+`@import "~datatablessubmenu";`
