@@ -1,6 +1,6 @@
 {
   "name": "datatablessubmenu",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Allow to add a submenu on click on datatables rows",
   "main": "DatatablesSubmenu.js",
   "scripts": {
